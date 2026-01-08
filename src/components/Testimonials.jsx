@@ -9,54 +9,54 @@ const Testimonials = () => {
   const {t} = useTranslation()
 
   return (
-          <section id="testimonials" class="testimonials__wrapper inner-container">
-        <h2 class="testimonials__title"> {t('testimonials.title')} </h2>
-        <p class="testimonials__description">
+          <section id="testimonials" className="testimonials__wrapper inner-container">
+        <h2 className="testimonials__title"> {t('testimonials.title')} </h2>
+        <p className="testimonials__description">
           {t('testimonials.description')}
         </p>
-        <div class="testimonial__grid">
-          <div class="">
-            <div class="testimonial-card__wrapper">
-              <div class="testimonial-card__inner">
-                <div class="testimonial-card__header">
+        <div className="testimonial__grid">
+          <div className="">
+            <div className="testimonial-card__wrapper">
+              <div className="testimonial-card__inner">
+                <div className="testimonial-card__header">
                   <img
                     src={client1}
-                    class="testimonial-card__photo"
+                    className="testimonial-card__photo"
                     alt={t('testimonials.client_photo')}
                   />
-                  <div class="flex-col">
-                    <p class="testimonial-card__name">María González</p>
-                    <p class="">La Moraleja</p>
+                  <div className="flex-col">
+                    <p className="testimonial-card__name">María González</p>
+                    <p className="">La Moraleja</p>
                   </div>
                 </div>
-                <div class="testimonial-card__rating-wrapper">
+                <div className="testimonial-card__rating-wrapper">
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt={t('testimonials.star')}
                   />
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt={t('testimonials.star')}
                   />
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt={t('testimonials.star')}
                   />
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt={t('testimonials.star')}
                   />
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt={t('testimonials.star')}
                   />
                 </div>
-                <p class="testimonial-card__comment">
+                <p className="testimonial-card__comment">
                   "¡Increíble servicio! Mi golden retriever siempre regresa
                   feliz y con un corte perfecto. El servicio a domicilio es
                   súper cómodo y profesional. Lo recomiendo 100%."
@@ -64,44 +64,44 @@ const Testimonials = () => {
               </div>
             </div>
           </div>
-          <div class="">
-            <div class="testimonial-card__wrapper">
-              <div class="testimonial-card__inner">
-                <div class="testimonial-card__header">
+          <div className="">
+            <div className="testimonial-card__wrapper">
+              <div className="testimonial-card__inner">
+                <div className="testimonial-card__header">
                   <img
                     src={client2}
-                    class="testimonial-card__photo"
+                    className="testimonial-card__photo"
                     alt={t('testimonials.client_photo')}
                   />
-                  <div class="flex-col">
-                    <p class="testimonial-card__name">María González</p>
-                    <p class="">La Moraleja</p>
+                  <div className="flex-col">
+                    <p className="testimonial-card__name">María González</p>
+                    <p className="">La Moraleja</p>
                   </div>
                 </div>
-                <div class="testimonial-card__rating-wrapper">
+                <div className="testimonial-card__rating-wrapper">
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt="start"
                   />
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt={t('testimonials.star')}
                   />
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt={t('testimonials.star')}
                   />
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt={t('testimonials.star')}
                   />
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt={t('testimonials.star')}
                   />
                 </div>
@@ -113,44 +113,44 @@ const Testimonials = () => {
               </div>
             </div>
           </div>
-          <div class="">
-            <div class="testimonial-card__wrapper">
-              <div class="testimonial-card__inner">
-                <div class="testimonial-card__header">
+          <div className="">
+            <div className="testimonial-card__wrapper">
+              <div className="testimonial-card__inner">
+                <div className="testimonial-card__header">
                   <img
                     src={client3}
-                    class="testimonial-card__photo"
+                    className="testimonial-card__photo"
                     alt={t('testimonials.client_photo')}
                   />
-                  <div class="flex-col">
-                    <p class="testimonial-card__name">María González</p>
-                    <p class="">La Moraleja</p>
+                  <div className="flex-col">
+                    <p className="testimonial-card__name">María González</p>
+                    <p className="">La Moraleja</p>
                   </div>
                 </div>
-                <div class="testimonial-card__rating-wrapper">
+                <div className="testimonial-card__rating-wrapper">
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt="start"
                   />
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt={t('testimonials.star')}
                   />
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt={t('testimonials.star')}
                   />
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt={t('testimonials.star')}
                   />
                   <img
                     src="start_icon.svg"
-                    class="testimonial__rating-star"
+                    className="testimonial__rating-star"
                     alt={t('testimonials.star')}
                   />
                 </div>

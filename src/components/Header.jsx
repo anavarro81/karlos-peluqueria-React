@@ -21,9 +21,9 @@ const Header = () => {
       
 
   return (
-    <header class="main-wrapper header">
-      <nav class="header__nav">
-        <ul class="header__list">          
+    <header className="main-wrapper header">
+      <nav className="header__nav">
+        <ul className="header__list">          
           {/* <li><a href="#services"> Servicios </a></li>
           <li><a href="#gallery"> Galería </a></li>
           <li><a href="#testimonials"> Testimonios </a></li>
@@ -44,7 +44,7 @@ const Header = () => {
                 
               
         </ul>
-        <ul class="header__mobile-list">
+        <ul className="header__mobile-list">
           <li><a href="#gallery"> Galeria </a></li>
           <li><a href="#testimonials"> Testimonio </a></li>
           <li><a href="#contact"> Contacto </a></li>

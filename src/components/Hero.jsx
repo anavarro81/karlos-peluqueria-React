@@ -7,14 +7,14 @@ const Hero = () => {
   
   return (
           
-      <section id="hero" class="hero_header_wrapper">
-        <div class="hero_header_tittle_wrapper">
-          <h1 class="hero__title">Karlos</h1>
-          <img src="paw_print.svg" alt="huella" class="hero__icon" />
-          <img src="clover_icon.svg" alt="trebol" class="hero__icon" />
+      <section id="hero" className="hero_header_wrapper">
+        <div className="hero_header_tittle_wrapper">
+          <h1 className="hero__title">Karlos</h1>
+          <img src="paw_print.svg" alt="huella" className="hero__icon" />
+          <img src="clover_icon.svg" alt="trebol" className="hero__icon" />
         </div>
-        <h2 class="hero__subtitle" > {t('hero.subtitle')} </h2>
-        <img src={dog_hero} class="hero__video" alt="perro" />
+        <h2 className="hero__subtitle" > {t('hero.subtitle')} </h2>
+        <img src={dog_hero} className="hero__video" alt="perro" />
       </section>
   )
 }

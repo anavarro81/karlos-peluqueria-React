@@ -4,52 +4,52 @@ const Conctact = () => {
   const {t} = useTranslation()
   
   return (
-          <div id="contact" class="contact__wrapper inner-container">
-        <h2 class="contact__title"> {t('contact.title')} </h2>
-        <h3 class="contact__description">
+          <div id="contact" className="contact__wrapper inner-container">
+        <h2 className="contact__title"> {t('contact.title')} </h2>
+        <h3 className="contact__description">
           {t('contact.description')}
         </h3>
-        <div class="contact__grid">
-          <div class="contact-card__wrapper" id="whatsapp">
-            <div class="contact-card__inner">
-              <div class="contact-card__icon-wrapper">
+        <div className="contact__grid">
+          <div className="contact-card__wrapper" id="whatsapp">
+            <div className="contact-card__inner">
+              <div className="contact-card__icon-wrapper">
                 <img
                   src="WhatsApp_icon.svg"
-                  class="contact-card__icon"
+                  className="contact-card__icon"
                   alt="icono whatsapp"
                 />
               </div>
-              <h3 class="contact-card__title">{t('contact.items.whatshapp.title')}</h3>
-              <p class="contact-card__description">
+              <h3 className="contact-card__title">{t('contact.items.whatshapp.title')}</h3>
+              <p className="contact-card__description">
                 {t('contact.items.whatshapp.description')}
               </p>
-              <button class="contact-card__button">
-                <span class="contact-card__text">{t('contact.items.whatshapp.buttontext')}</span>
+              <button className="contact-card__button">
+                <span className="contact-card__text">{t('contact.items.whatshapp.buttontext')}</span>
                 <img
                   src="WhatsApp_icon.svg"
                   alt={t('contact.items.whatshapp.whatshapp_icon')}
-                  class="contact-card__button-icon"
+                  className="contact-card__button-icon"
                 />
               </button>
             </div>
           </div>
-          <div class="contact-card__wrapper" id="location">
-            <div class="contact-card__inner">
-              <div class="contact-card__icon-wrapper">
+          <div className="contact-card__wrapper" id="location">
+            <div className="contact-card__inner">
+              <div className="contact-card__icon-wrapper">
                 <img
                   src="Location_icon.svg"
-                  class="contact-card__icon"
+                  className="contact-card__icon"
                   alt="icono location"
                 />
               </div>
-              <h3 class="contact-card__title">{t('contact.items.location.title')}</h3>
-              <p class="contact-card__description">{t('contact.items.location.description')}</p>
-              <button class="contact-card__button">
-                <span class="contact-card__text">{t('contact.items.location.buttontext')}</span>
+              <h3 className="contact-card__title">{t('contact.items.location.title')}</h3>
+              <p className="contact-card__description">{t('contact.items.location.description')}</p>
+              <button className="contact-card__button">
+                <span className="contact-card__text">{t('contact.items.location.buttontext')}</span>
                 <img
                   src="Google Maps_icon.svg"
                   alt={t('contact.items.location.googleMaps_icon')}
-                  class="contact-card__button-icon"
+                  className="contact-card__button-icon"
                 />
               </button>
             </div>
