@@ -2,7 +2,7 @@
 
 const GalleryImage = ({img, alt = 'imagen de perro', setshowLightBox, setImg}) => {
   
-  console.log('img en GalleryImage:', img); 
+  
   
   return (
                   <div class="gallery__image--item" 

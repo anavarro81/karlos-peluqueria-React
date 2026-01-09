@@ -5,7 +5,6 @@ const Header = () => {
     const { t, i18n } = useTranslation();
 
     const changeLanguage = (lng) => {
-      console.log('lng == ', lng)
       i18n.changeLanguage(lng)
       document.documentElement.lang = lng;
     }

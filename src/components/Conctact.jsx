@@ -2,6 +2,12 @@ import { useTranslation } from "react-i18next"
 
 const Conctact = () => {
   const {t} = useTranslation()
+
+
+  const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+  const mensaje = 'Hola, me gustaría saber más sobre los servicios de peluqueria que ofrecen.';
+  const encodedMessage = encodeURIComponent(mensaje);
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
   
   return (
           <div id="contact" className="contact__wrapper inner-container">
@@ -23,14 +29,19 @@ const Conctact = () => {
               <p className="contact-card__description">
                 {t('contact.items.whatshapp.description')}
               </p>
-              <button className="contact-card__button">
+              <a 
+                className="contact-card__button"
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                >
                 <span className="contact-card__text">{t('contact.items.whatshapp.buttontext')}</span>
                 <img
                   src="WhatsApp_icon.svg"
                   alt={t('contact.items.whatshapp.whatshapp_icon')}
                   className="contact-card__button-icon"
                 />
-              </button>
+              </a>
             </div>
           </div>
           <div className="contact-card__wrapper" id="location">
@@ -44,14 +55,19 @@ const Conctact = () => {
               </div>
               <h3 className="contact-card__title">{t('contact.items.location.title')}</h3>
               <p className="contact-card__description">{t('contact.items.location.description')}</p>
-              <button className="contact-card__button">
+              <a className="contact-card__button"                              
+                href="https://maps.app.goo.gl/sktHJMp2BbRQv2XWA"
+                target="_blank"
+                rel="noopener noreferrer"
+
+              >
                 <span className="contact-card__text">{t('contact.items.location.buttontext')}</span>
                 <img
                   src="Google Maps_icon.svg"
                   alt={t('contact.items.location.googleMaps_icon')}
                   className="contact-card__button-icon"
                 />
-              </button>
+              </a>
             </div>
           </div>
         </div>

@@ -8,14 +8,10 @@ const LightBox = ({img, setshowLightBox}) => {
 
     const handleClickOutside = (event) => {
 
-        console.log('click outside');
-        console.log('lightboxRef.current :', lightboxRef.current);
-        console.log('event.target :', event.target);
 
 
         if (lightboxRef.current && lightboxRef.current.contains(event.target)) {
             // Aquí puedes manejar el cierre del lightbox si es necesario
-            console.log('cerrando lightbox');
             setshowLightBox({visible: false, img: ''});
         }
     }
