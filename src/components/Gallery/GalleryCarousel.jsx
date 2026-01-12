@@ -143,12 +143,12 @@ const GalleryCarousel = () => {
             
           >
             <div className="relative">
-              {!imageLoaded[imageGallery[lightboxIndex].id] && !imageError[imageGallery[lightboxIndex].id] && (
+              {!imageLoaded[imageGallery[currentIndex].id] && !imageError[imageGallery[currentIndex].id] && (
                 <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-center justify-center rounded-lg">
                   <div className="text-white text-xl">Loading...</div>
                 </div>
               )}
-              {imageError[imageGallery[lightboxIndex].id] ? (
+              {imageError[imageGallery[currentIndex].id] ? (
                 <div className="bg-gray-800 rounded-lg p-12 flex items-center justify-center">
                   <div className="text-center">
                     <div className="text-white text-6xl mb-4">📷</div>
@@ -157,11 +157,11 @@ const GalleryCarousel = () => {
                 </div>
               ) : (
                 <img 
-                  src={imageGallery[lightboxIndex].url}
-                  alt={imageGallery[lightboxIndex].title}
+                  src={imageGallery[currentIndex].url}
+                  alt={imageGallery[currentIndex].title}
                   className="w-full h-full max-h-[80vh] object-contain rounded-lg shadow-2xl animate-scaleIn"
-                  onLoad={() => handleImageLoad(imageGallery[lightboxIndex].id)}
-                  onError={() => handleImageError(imageGallery[lightboxIndex].id)}
+                  onLoad={() => handleImageLoad(imageGallery[currentIndex].id)}
+                  onError={() => handleImageError(imageGallery[currentIndex].id)}
                   onClick={() => openLightbox(currentIndex)}    
                 />
               )}
