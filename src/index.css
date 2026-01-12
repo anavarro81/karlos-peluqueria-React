@@ -11,7 +11,9 @@
    09. Contact
    10. Footer
    11. Lightbox
+   12. Tailwind Overrides
    12. Media Querys
+
 
 -----------------------------------------------------*/
 
@@ -44,6 +46,7 @@ img {
 :root {
   /* main colores */
   --main-color: #418e5b;
+  --main-color-dark: #35794d;
 
   --max-width: 240rem;
 
@@ -649,11 +652,163 @@ select {
 }
 
 
+/* -----------------------------------------------
+   12. Tailwind Overrides
+----------------------------------------------- */
 
 
+/* Layout & sizing */
+.bg-green {
+  background-color: var(--main-color);
+}
+
+.bg-green:hover {
+  background-color: var(--main-color-dark);
+}
+
+
+.min-h-screen { min-height: 100vh; }
+.w-full { width: 100%; }
+.max-w-2xl { max-width: 42rem; } /* 672px */
+.max-w-7xl { max-width: 80rem; } /* 1280px */
+.max-h-\[90vh\] { max-height: 90vh; }
+.max-h-\[80vh\] { max-height: 80vh; }
+.h-full { height: 100%; }
+.min-w-full { min-width: 100%; }
+.p-4 { padding: 1rem; }
+.p-2 { padding: 0.5rem; }
+.p-3 { padding: 0.75rem; }
+.p-6 { padding: 1.5rem; }
+.p-12 { padding: 3rem; }
+.mx-4 { margin-left: 1rem; margin-right: 1rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+.text-center { text-align: center; }
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.gap-2 { gap: 0.5rem; }
+.fixed { position: fixed; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+.left-4 { left: 1rem; }
+.right-4 { right: 1rem; }
+.top-4 { top: 1rem; }
+.top-1\/2 { top: 50%; }
+.-translate-y-1\/2 { transform: translateY(-50%); }
+.rounded-2xl { border-radius: 1rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-full { border-radius: 9999px; }
+.shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+.overflow-hidden { overflow: hidden; }
+.cursor-pointer { cursor: pointer; }
+.aspect-video { aspect-ratio: 16 / 9; }
+.object-cover { object-fit: cover; }
+.object-contain { object-fit: contain; }
+.h-2 { height: 0.5rem; }
+.w-8 { width: 2rem; }
+.w-2 { width: 0.5rem; }
+
+/* Display & typography */
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-6xl { font-size: 3.75rem; line-height: 1; }
+.text-xl { font-size: 1.25rem; }
+.text-sm { font-size: 0.875rem; }
+.font-bold { font-weight: 700; }
+.text-white { color: #ffffff; }
+.text-gray-300 { color: #D1D5DB; }
+.text-gray-400 { color: #9CA3AF; }
+.text-gray-500 { color: #6B7280; }
+.text-gray-600 { color: #4B5563; }
+.text-gray-800 { color: #1F2937; }
+
+/* Backgrounds & colors (including opacity utility forms) */
+.bg-white { background-color: #ffffff; }
+.bg-white\/20 { background-color: rgba(255,255,255,0.20); }
+.bg-white\/80 { background-color: rgba(255,255,255,0.80); }
+.bg-white\/10 { background-color: rgba(255,255,255,0.10); }
+.bg-white\/20:hover { background-color: rgba(255,255,255,0.20); } /* hover fallback */
+.bg-gray-200 { background-color: #E5E7EB; }
+.bg-gray-100 { background-color: #F3F4F6; }
+.bg-gray-800 { background-color: #1F2937; }
+.bg-black\/95 { background-color: rgba(0,0,0,0.95); }
+.bg-purple-600 { background-color: #7c3aed; }
+.bg-gray-300 { background-color: #D1D5DB; }
+.bg-gray-400 { background-color: #9CA3AF; }
+
+/* Gradient (approximation using the specific colors used in the component) */
+.bg-gradient-to-br { background-image: linear-gradient(135deg, #0f172a 0%, #6d28d9 50%, #0f172a 100%); }
+
+/* Backdrop blur approximations */
+.backdrop-blur-sm { backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+.backdrop-blur-md { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+
+/* Interaction states (escaped selectors for classes containing ":" or "/") */
+.hover\:bg-white:hover { background-color: #ffffff; }
+.hover\:bg-white\/20:hover { background-color: rgba(255,255,255,0.20); }
+.hover\:bg-gray-400:hover { background-color: #9CA3AF; }
+.hover\:scale-110:hover { transform: scale(1.10); }
+.active\:scale-95:active { transform: scale(0.95); }
+
+/* Positioning & z-index */
+.z-50 { z-index: 50; }
+.z-10 { z-index: 10; }
+
+/* Transitions & animation utilities */
+.transition-transform { transition-property: transform; }
+.transition-all { transition: all 0.2s ease; }
+.duration-500 { transition-duration: 500ms; }
+.duration-300 { transition-duration: 300ms; }
+.duration-200 { transition-duration: 200ms; }
+.ease-out { transition-timing-function: ease-out; }
+
+/* Hover/focus utility placeholders already covered above for scale/bg changes */
+
+/* Pulse animation */
+@keyframes pulse-custom {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+.animate-pulse { animation: pulse-custom 1.5s ease-in-out infinite; }
+
+/* Custom animations defined inline in component (reused classes) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+.animate-fadeIn { animation: fadeIn 0.3s ease-out; }
+.animate-scaleIn { animation: scaleIn 0.3s ease-out; }
+
+/* Small utilities */
+.text-center { text-align: center; }
+.justify-center { justify-content: center; }
+.transition-all { transition: all 0.2s ease; }
+
+/* Specific small helpers used in component */
+.text-gray-600 { color: #4B5563; }
+.text-gray-400 { color: #9CA3AF; }
+
+/* Ensure buttons that rely on transform combine correctly */
+.absolute.left-4.top-1\/2 { left: 1rem; top: 50%; transform: translateY(-50%); }
+
+/* Fallbacks for classes containing characters that need escaping when used in HTML */
+.bg-black\/95, .bg-white\/80, .bg-white\/20, .bg-white\/10, .max-h-\[90vh\], .max-h-\[80vh\] { /* already defined above */ }
+
+/* Completed */
 
 /* -----------------------------------------------
-   12. Media Querys
+   13. Media Querys
 ----------------------------------------------- */
 
 /* smaller destoks */

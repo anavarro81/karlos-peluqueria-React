@@ -1,7 +1,8 @@
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import Services from './components/Services.jsx'
-import Gallery from './components/Gallery.jsx'
+import GalleryGrid from './components/Gallery/GalleryGrid.jsx'
+import GalleryCarousel from './components/Gallery/GalleryCarousel.jsx'
 import Testimonials from './components/Testimonials.jsx'
 import Conctact from './components/Conctact.jsx'
 import Footer from './components/Footer.jsx'
@@ -18,8 +19,7 @@ function App() {
       
       <Hero />
       <Services />
-      <Gallery />
-      {/* <Testimonials /> */}
+      <GalleryCarousel />
       <Conctact />
     </main>
         <Footer/> 

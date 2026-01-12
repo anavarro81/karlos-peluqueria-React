@@ -1,13 +1,13 @@
-import imageGallery from '../data/imageGallery';
+import imageGallery from '../../data/imageGallery';
 
 
 import { useTranslation } from "react-i18next"
 import { useState } from 'react';
-import LightboxImaLightboxImage from './LightBox';
-import GalleryImage from './GalleryImage';
-import LightBox from './LightBox';
+import LightboxImaLightboxImage from '../LightboxImage';
+import GalleryImage from '../GalleryImage';
+import LightBox from '../LightBox';
 
-const Gallery = () => {
+const GalleryGrid = () => {
 
   const {t} = useTranslation()
 
@@ -41,4 +41,4 @@ const Gallery = () => {
   )
 }
 
-export default Gallery
+export default GalleryGrid
