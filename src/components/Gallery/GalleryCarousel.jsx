@@ -19,30 +19,53 @@ const GalleryCarousel = () => {
   const onTouchStart = (e) => {
     setTouchEnd(0);
     setTouchStart(e.targetTouches[0].clientX);
+
+    
+
   };
 
   const onTouchMove = (e) => {
     setTouchEnd(e.targetTouches[0].clientX);
+    
   };
 
   const onTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
+
+    
     
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
 
     if (isLeftSwipe) {
+        if (isLightboxOpen) {
+          goToNextLightbox();
+          return;
+        }
       goToNext();
     } else if (isRightSwipe) {
+      if (isLightboxOpen) {
+        goToPreviousLightbox();
+        return;
+      }
       goToPrevious();
     }
   };
 
-  const goToNext = () => {
+  const goToNext = () => {  
+
+    
+
     setCurrentIndex((prevIndex) => 
       prevIndex === imageGallery.length - 1 ? 0 : prevIndex + 1
+       
+    
     );
+
+    console.log('next index', currentIndex);
+
+
   };
 
   const goToPrevious = () => {
@@ -52,7 +75,7 @@ const GalleryCarousel = () => {
   };
 
   const openLightbox = (index) => {
-    console.log('index', index);
+    
     setLightboxIndex(index);
     setIsLightboxOpen(true);
     document.body.style.overflow = "hidden";
@@ -121,7 +144,7 @@ const GalleryCarousel = () => {
               e.stopPropagation();
               goToPrevious();
             }}
-            className="bg-green absolute left-4 top-1/2    text-white rounded-full p-4 transition-all duration-200 hover:scale-110 active:scale-95 z-10"
+            className="bg-green absolute left-4     text-white rounded-full p-4 transition-all duration-200 hover:scale-110 active:scale-95 z-10"
             aria-label="Previous image"
           >
             <IoChevronBack className="text-3xl" />
@@ -132,7 +155,7 @@ const GalleryCarousel = () => {
               e.stopPropagation();
               goToNext();
             }}
-            className="bg-green absolute right-4 top-1/2    text-white rounded-full p-4 transition-all duration-200  active:scale-95 z-10"
+            className="bg-green absolute right-4     text-white rounded-full p-4 transition-all duration-200  hover:scale-110 active:scale-95 z-10"
             aria-label="Next image"
           >
             <IoChevronForward className="text-3xl" />
@@ -184,7 +207,10 @@ const GalleryCarousel = () => {
               {isLightboxOpen && (
         <div 
           className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center animate-fadeIn"
-          onClick={closeLightbox}
+                
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
         >
           <button
             onClick={closeLightbox}
@@ -199,7 +225,7 @@ const GalleryCarousel = () => {
               e.stopPropagation();
               goToPreviousLightbox();
             }}
-            className="absolute left-4 top-1/2  bg-white/10 hover:bg-white/20 text-white rounded-full p-4 transition-all duration-200 hover:scale-110 active:scale-95 z-10"
+            className="absolute left-4   bg-white/10 hover:bg-white/20 text-white rounded-full p-4 transition-all duration-200 hover:scale-110 active:scale-95 z-10"
             aria-label="Previous image"
           >
             <IoChevronBack className="text-3xl" />
@@ -210,7 +236,7 @@ const GalleryCarousel = () => {
               e.stopPropagation();
               goToNextLightbox();
             }}
-            className="absolute right-4 top-1/2  bg-white/10 hover:bg-white/20 text-white rounded-full p-4 transition-all duration-200 hover:scale-110 active:scale-95 z-10"
+            className="absolute right-4   bg-white/10 hover:bg-white/20 text-white rounded-full p-4 transition-all duration-200 hover:scale-110 active:scale-95 z-10"
             aria-label="Next image"
           >
             <IoChevronForward className="text-3xl" />
@@ -218,15 +244,15 @@ const GalleryCarousel = () => {
 
           <div 
             className="relative max-w-7xl max-h-[90vh] w-full mx-4"
-            onClick={(e) => e.stopPropagation()}
+            // onClick={(e) => e.stopPropagation()}
           >
             <div className="relative">
-              {!imageLoaded[imageGallery [lightboxIndex].id] && !imageError[imageGallery [lightboxIndex].id] && (
+              {!imageLoaded[imageGallery [currentIndex].id] && !imageError[imageGallery [currentIndex].id] && (
                 <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-center justify-center rounded-lg">
                   <div className="text-white text-xl">Loading...</div>
                 </div>
               )}
-              {imageError[imageGallery [lightboxIndex].id] ? (
+              {imageError[imageGallery [currentIndex].id] ? (
                 <div className="bg-gray-800 rounded-lg p-12 flex items-center justify-center">
                   <div className="text-center">
                     <div className="text-white text-6xl mb-4">📷</div>
