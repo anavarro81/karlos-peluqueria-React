@@ -51,10 +51,11 @@ const Services = () => {
           <div className="services_item">
             <img
               src="Home_services_icon.svg"
-              className="services_icon"
+              className="services_icon" 
               alt="icono services"
             />
-            <p className="services__element">{t('services.items.lodging')}</p>
+            <p className="services__element">{t('services.items.lodging1')} <br/> {t('services.items.lodging2')}</p>
+            
           </div>
         </div>
       </section>
