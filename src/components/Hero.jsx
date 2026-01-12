@@ -1,4 +1,5 @@
 import dog_hero from '../assets/Dog Hero.webp'
+import hero from '../assets/Hero web.webp'
 import { useTranslation } from "react-i18next"
 
 const Hero = () => {
@@ -14,7 +15,7 @@ const Hero = () => {
           <img src="clover_icon.svg" alt="trebol" className="hero__icon" />
         </div>
         <h2 className="hero__subtitle" > {t('hero.subtitle')} </h2>
-        <img src={dog_hero} className="hero__video" alt="perro" />
+        <img src={hero} className="hero__video" alt="perro" />
       </section>
   )
 }

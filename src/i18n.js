@@ -28,7 +28,7 @@ i18n.use(initReactI18next).init({
             stripping: "Stripping",
             scissors: "Tijera",
             machine: "Corte a máquina",
-            lodging: "Alojamiento canino fines de semana",
+            lodging: "Alojamiento canino losfines de semana",
           },
         },
 
