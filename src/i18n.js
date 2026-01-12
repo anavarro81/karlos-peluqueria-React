@@ -28,7 +28,7 @@ i18n.use(initReactI18next).init({
             stripping: "Deslanado",
             scissors: "Tijera",
             machine: "Corte a máquina",
-            lodging: "Alojamiento canino losfines de semana",
+            lodging: "Alojamiento fines de semana y vacaciones consultar (individual y selecto)",
           },
         },
 
@@ -96,7 +96,7 @@ i18n.use(initReactI18next).init({
             stripping: "Stripping",
             scissors: "Scissors",
             machine: "Machine cut",
-            lodging: "Weekend dog boarding",
+            lodging: "Dog boarding on weekends and holidays – please inquire (individual and selective)",
           },
         },
 
@@ -164,7 +164,7 @@ i18n.use(initReactI18next).init({
             stripping: "Stripping",
             scissors: "Ciseaux",
             machine: "Coupe à la machine",
-            lodging: "Hébergement canin week-end",
+            lodging: "Hébergement canin les week-ends et jours fériés – nous consulter (individuel et sélectif)",
           },
         },
 
