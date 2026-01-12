@@ -656,6 +656,13 @@ select {
    12. Tailwind Overrides
 ----------------------------------------------- */
 
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
 
 /* Layout & sizing */
 .bg-green {

@@ -119,9 +119,9 @@ const GalleryCarousel = () => {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              goToPreviousLightbox();
+              goToPrevious();
             }}
-            className="bg-green absolute left-4 top-1/2  -translate-y-1/2  text-white rounded-full p-4 transition-all duration-200 hover:scale-110 active:scale-95 z-10"
+            className="bg-green absolute left-4 top-1/2    text-white rounded-full p-4 transition-all duration-200 hover:scale-110 active:scale-95 z-10"
             aria-label="Previous image"
           >
             <IoChevronBack className="text-3xl" />
@@ -130,9 +130,9 @@ const GalleryCarousel = () => {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              goToNextLightbox();
+              goToNext();
             }}
-            className="bg-green absolute right-4 top-1/2 -translate-y-1/2   text-white rounded-full p-4 transition-all duration-200  active:scale-95 z-10"
+            className="bg-green absolute right-4 top-1/2    text-white rounded-full p-4 transition-all duration-200  active:scale-95 z-10"
             aria-label="Next image"
           >
             <IoChevronForward className="text-3xl" />
@@ -159,7 +159,7 @@ const GalleryCarousel = () => {
                 <img 
                   src={imageGallery[currentIndex].url}
                   alt={imageGallery[currentIndex].title}
-                  className="w-full h-full max-h-[80vh] object-contain rounded-lg shadow-2xl animate-scaleIn"
+                  className="w-full h-full max-h-[80vh] object-contain rounded-lg  animate-scaleIn"
                   onLoad={() => handleImageLoad(imageGallery[currentIndex].id)}
                   onError={() => handleImageError(imageGallery[currentIndex].id)}
                   onClick={() => openLightbox(currentIndex)}    
@@ -199,7 +199,7 @@ const GalleryCarousel = () => {
               e.stopPropagation();
               goToPreviousLightbox();
             }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-4 transition-all duration-200 hover:scale-110 active:scale-95 z-10"
+            className="absolute left-4 top-1/2  bg-white/10 hover:bg-white/20 text-white rounded-full p-4 transition-all duration-200 hover:scale-110 active:scale-95 z-10"
             aria-label="Previous image"
           >
             <IoChevronBack className="text-3xl" />
@@ -210,7 +210,7 @@ const GalleryCarousel = () => {
               e.stopPropagation();
               goToNextLightbox();
             }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-4 transition-all duration-200 hover:scale-110 active:scale-95 z-10"
+            className="absolute right-4 top-1/2  bg-white/10 hover:bg-white/20 text-white rounded-full p-4 transition-all duration-200 hover:scale-110 active:scale-95 z-10"
             aria-label="Next image"
           >
             <IoChevronForward className="text-3xl" />
