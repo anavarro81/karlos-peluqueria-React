@@ -25,7 +25,7 @@ i18n.use(initReactI18next).init({
           items: {
             clinic: "Servicios en clínica o a domicilio",
             baths: "Baños",
-            stripping: "Stripping",
+            stripping: "Deslanado",
             scissors: "Tijera",
             machine: "Corte a máquina",
             lodging: "Alojamiento canino losfines de semana",

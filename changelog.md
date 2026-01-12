@@ -4,6 +4,8 @@
 
 ### Modificado
 - Mensaje de WhatsApp ahora inicia vacío (sin texto predefinido).
+- Se incuye la nueva imagen de Hero creada por Karlos
+- Se cambia la traduccion de "stripping" por "deslanado".
 
 ### Eliminado
 - Sección de comentarios ocultada temporalmente.
