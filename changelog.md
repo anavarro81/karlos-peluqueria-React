@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.1.0 - 2026-01-12
+
+### Modificado
+- Mensaje de WhatsApp ahora inicia vacío (sin texto predefinido).
+
+### Eliminado
+- Sección de comentarios ocultada temporalmente.
+
+
+
 ## Unreleased
 
 ## v1.0.0 - 2026-01-05

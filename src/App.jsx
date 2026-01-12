@@ -19,7 +19,7 @@ function App() {
       <Hero />
       <Services />
       <Gallery />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Conctact />
     </main>
         <Footer/> 

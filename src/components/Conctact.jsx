@@ -5,10 +5,12 @@ const Conctact = () => {
 
 
   const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
-  const mensaje = 'Hola, me gustaría saber más sobre los servicios de peluqueria que ofrecen.';
-  const encodedMessage = encodeURIComponent(mensaje);
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-  
+  // Se elimina el mensaje predefinido a peticion de Karlos
+  // const mensaje = 'Hola, me gustaría saber más sobre los servicios de peluqueria que ofrecen.';
+  // const encodedMessage = encodeURIComponent(mensaje);
+  // const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  const whatsappLink = `https://wa.me/${phoneNumber}`;
+    
   return (
           <div id="contact" className="contact__wrapper inner-container">
         <h2 className="contact__title"> {t('contact.title')} </h2>
